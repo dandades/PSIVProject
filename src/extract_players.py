@@ -2,47 +2,63 @@ from ultralytics import YOLO
 import cv2
 import os
 
-#NOTE: We are using yolo8n.pt AI model to detect the players and the ball on each frame
-model = YOLO("yolov8n.pt") 
+model = YOLO("yolov8n.pt")
 
-video_path = "videos/test1.mp4"
-cap = cv2.VideoCapture(video_path) # opens the video for reading it frame per frame
-
+videos_dir = "videos"
 output_dir = "dataset/raw_players"
 os.makedirs(output_dir, exist_ok=True)
 
-frame_id = 0 # frames counter
+frame_global_id = 0  # contador global
 
-# We iterate all the image frames
-while True:
-    continues, frame = cap.read() # continues is a boolean value. True if a frame exists | False if the video has ended
-    if not continues: 
-        break
-    
-    # Executes AI YOLO model and applies tracking
-    results = model.track(frame, persist=True)
+for video_name in os.listdir(videos_dir):
+    video_path = os.path.join(videos_dir, video_name)
 
-    for r in results:
-        # bounding boxes extraction
-        boxes = r.boxes
+    # Solo vídeos (por si se ha colado algo que no es un vídeo en el diectorio)
+    if not video_path.endswith((".mp4", ".avi", ".mov")):
+        continue
 
-        for i, box in enumerate(boxes):
-            cls = int(box.cls[0]) # Object class extraction (Since we are using COCO, 0 = person)
+    print(f"Processing: {video_name}")
 
-            # ONLY PERSONS
-            if cls == 0:
-                x1, y1, x2, y2 = map(int, box.xyxy[0])
+    # Creamos una carpeta para cada vídeo
+    video_folder_name = os.path.splitext(video_name)[0]  # quita .mp4
+    video_output_dir = os.path.join(output_dir, video_folder_name)
+    os.makedirs(video_output_dir, exist_ok=True)
 
-                cut  = frame[y1:y2, x1:x2] # Bounding Box content
+    cap = cv2.VideoCapture(video_path)
+    frame_id = 0
 
-                if cut.size == 0:
-                    continue 
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
 
-                save_path = f"{output_dir}/frame{frame_id}_id{i}.jpg"
-                cv2.imwrite(save_path, cut)
+        results = model.track(frame, persist=True)
 
-    frame_id += 1
+        for r in results:
+            boxes = r.boxes
 
-# Closes the video without errors
-cap.release()
-print("Done extracting players")
+            for i, box in enumerate(boxes):
+                cls = int(box.cls[0])
+
+                if cls == 0:  # persona
+                    x1, y1, x2, y2 = map(int, box.xyxy[0])
+
+                    cut = frame[y1:y2, x1:x2]
+
+                    if cut.size == 0:
+                        continue
+
+                    # Guardar dentro de la carpeta del vídeo
+                    save_path = os.path.join(
+                        video_output_dir,
+                        f"frame{frame_id}_id{i}.jpg"
+                    )
+
+                    cv2.imwrite(save_path, cut)
+
+        frame_id += 1
+        frame_global_id += 1
+
+    cap.release()
+
+print("Done extracting from all videos")
