@@ -1,0 +1,33 @@
+track_id,frame_id,prediction,prediction_name,manual_answer,is_valid_player,team_correct,votes,crop_path
+1,15,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_001_frame_000015_pred_Team_B_crop.jpg
+2,15,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_002_frame_000015_pred_Team_A_crop.jpg
+3,15,1,Team B,t,False,,"{""1"": 16}",manual_eval\tracks_110\id_003_frame_000015_pred_Team_B_crop.jpg
+4,15,1,Team B,skip,,,"{""1"": 16}",manual_eval\tracks_110\id_004_frame_000015_pred_Team_B_crop.jpg
+5,15,1,Team B,t,False,,"{""1"": 16}",manual_eval\tracks_110\id_005_frame_000015_pred_Team_B_crop.jpg
+6,15,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_006_frame_000015_pred_Team_B_crop.jpg
+7,19,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_007_frame_000019_pred_Team_B_crop.jpg
+8,15,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_008_frame_000015_pred_Team_A_crop.jpg
+9,15,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_009_frame_000015_pred_Team_A_crop.jpg
+10,15,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_010_frame_000015_pred_Team_A_crop.jpg
+11,15,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_011_frame_000015_pred_Team_B_crop.jpg
+12,15,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_012_frame_000015_pred_Team_B_crop.jpg
+13,34,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_013_frame_000034_pred_Team_B_crop.jpg
+14,29,0,Team A,s,True,True,"{""0"": 14, ""1"": 2}",manual_eval\tracks_110\id_014_frame_000029_pred_Team_A_crop.jpg
+15,15,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_015_frame_000015_pred_Team_B_crop.jpg
+27,23,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_027_frame_000023_pred_Team_B_crop.jpg
+28,24,1,Team B,skip,,,"{""1"": 16}",manual_eval\tracks_110\id_028_frame_000024_pred_Team_B_crop.jpg
+43,44,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_043_frame_000044_pred_Team_B_crop.jpg
+52,59,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_052_frame_000059_pred_Team_A_crop.jpg
+87,87,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_087_frame_000087_pred_Team_A_crop.jpg
+157,161,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_157_frame_000161_pred_Team_A_crop.jpg
+187,180,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_187_frame_000180_pred_Team_A_crop.jpg
+218,227,0,Team A,s,True,True,"{""0"": 15, ""1"": 1}",manual_eval\tracks_110\id_218_frame_000227_pred_Team_A_crop.jpg
+234,211,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_234_frame_000211_pred_Team_A_crop.jpg
+249,221,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_249_frame_000221_pred_Team_A_crop.jpg
+255,230,1,Team B,skip,,,"{""1"": 16}",manual_eval\tracks_110\id_255_frame_000230_pred_Team_B_crop.jpg
+259,258,0,Team A,s,True,True,"{""0"": 14, ""1"": 2}",manual_eval\tracks_110\id_259_frame_000258_pred_Team_A_crop.jpg
+262,239,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_262_frame_000239_pred_Team_B_crop.jpg
+272,244,1,Team B,s,True,True,"{""1"": 16}",manual_eval\tracks_110\id_272_frame_000244_pred_Team_B_crop.jpg
+281,252,1,Team B,t,False,,"{""1"": 16}",manual_eval\tracks_110\id_281_frame_000252_pred_Team_B_crop.jpg
+296,261,0,Team A,s,True,True,"{""0"": 16}",manual_eval\tracks_110\id_296_frame_000261_pred_Team_A_crop.jpg
+299,268,0,Team A,s,True,True,"{""0"": 13, ""1"": 3}",manual_eval\tracks_110\id_299_frame_000268_pred_Team_A_crop.jpg

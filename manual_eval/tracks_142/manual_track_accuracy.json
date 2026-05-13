@@ -1,0 +1,654 @@
+[
+  {
+    "track_id": 1,
+    "frame_id": 15,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_001_frame_000015_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 2,
+    "frame_id": 17,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_002_frame_000017_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 3,
+    "frame_id": 15,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_003_frame_000015_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 5,
+    "frame_id": 15,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_005_frame_000015_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 6,
+    "frame_id": 18,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_006_frame_000018_pred_Team_B_crop.jpg",
+    "manual_answer": "skip",
+    "is_valid_player": "",
+    "team_correct": ""
+  },
+  {
+    "track_id": 7,
+    "frame_id": 15,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_007_frame_000015_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 8,
+    "frame_id": 15,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_008_frame_000015_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 9,
+    "frame_id": 15,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 15,
+      "0": 1
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_009_frame_000015_pred_Team_B_crop.jpg",
+    "manual_answer": "skip",
+    "is_valid_player": "",
+    "team_correct": ""
+  },
+  {
+    "track_id": 11,
+    "frame_id": 15,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_011_frame_000015_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 12,
+    "frame_id": 15,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_012_frame_000015_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 14,
+    "frame_id": 17,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_014_frame_000017_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 19,
+    "frame_id": 21,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_019_frame_000021_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 20,
+    "frame_id": 19,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_020_frame_000019_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 31,
+    "frame_id": 22,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_031_frame_000022_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 67,
+    "frame_id": 34,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_067_frame_000034_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 73,
+    "frame_id": 39,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_073_frame_000039_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 79,
+    "frame_id": 38,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_079_frame_000038_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 115,
+    "frame_id": 53,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_115_frame_000053_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 127,
+    "frame_id": 52,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_127_frame_000052_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 136,
+    "frame_id": 54,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_136_frame_000054_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 155,
+    "frame_id": 60,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_155_frame_000060_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 178,
+    "frame_id": 68,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_178_frame_000068_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 207,
+    "frame_id": 72,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_207_frame_000072_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 233,
+    "frame_id": 80,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_233_frame_000080_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 467,
+    "frame_id": 142,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_467_frame_000142_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 522,
+    "frame_id": 162,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_522_frame_000162_pred_Team_B_crop.jpg",
+    "manual_answer": "skip",
+    "is_valid_player": "",
+    "team_correct": ""
+  },
+  {
+    "track_id": 532,
+    "frame_id": 162,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_532_frame_000162_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 545,
+    "frame_id": 170,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_545_frame_000170_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 546,
+    "frame_id": 172,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_546_frame_000172_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 575,
+    "frame_id": 192,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_575_frame_000192_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 579,
+    "frame_id": 192,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_579_frame_000192_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 592,
+    "frame_id": 223,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_592_frame_000223_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 596,
+    "frame_id": 196,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_596_frame_000196_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 602,
+    "frame_id": 202,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_602_frame_000202_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 603,
+    "frame_id": 205,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_603_frame_000205_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 622,
+    "frame_id": 210,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_622_frame_000210_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 672,
+    "frame_id": 232,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_672_frame_000232_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 674,
+    "frame_id": 233,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_674_frame_000233_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 706,
+    "frame_id": 261,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_706_frame_000261_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 726,
+    "frame_id": 256,
+    "prediction": 0,
+    "prediction_name": "Team A",
+    "votes": {
+      "0": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_726_frame_000256_pred_Team_A_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 743,
+    "frame_id": 295,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "0": 1,
+      "1": 15
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_743_frame_000295_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 754,
+    "frame_id": 271,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_754_frame_000271_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 768,
+    "frame_id": 280,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_768_frame_000280_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 774,
+    "frame_id": 290,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_774_frame_000290_pred_Team_B_crop.jpg",
+    "manual_answer": "skip",
+    "is_valid_player": "",
+    "team_correct": ""
+  },
+  {
+    "track_id": 775,
+    "frame_id": 288,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_775_frame_000288_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 786,
+    "frame_id": 296,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_786_frame_000296_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  },
+  {
+    "track_id": 796,
+    "frame_id": 298,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_796_frame_000298_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 798,
+    "frame_id": 299,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_798_frame_000299_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 800,
+    "frame_id": 306,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_800_frame_000306_pred_Team_B_crop.jpg",
+    "manual_answer": "s",
+    "is_valid_player": true,
+    "team_correct": true
+  },
+  {
+    "track_id": 814,
+    "frame_id": 330,
+    "prediction": 1,
+    "prediction_name": "Team B",
+    "votes": {
+      "1": 16
+    },
+    "crop_path": "manual_eval\\tracks_142\\id_814_frame_000330_pred_Team_B_crop.jpg",
+    "manual_answer": "t",
+    "is_valid_player": false,
+    "team_correct": ""
+  }
+]
