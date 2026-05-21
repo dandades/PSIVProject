@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+stubs/
+output_videos/
+manual_eval/
+models/best.pt
