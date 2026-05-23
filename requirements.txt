@@ -1,0 +1,10 @@
+# Core video and numerical processing
+numpy==2.4.4
+opencv-python==4.13.0.92
+scikit-learn==1.8.0
+
+# Detection and tracking
+torch==2.11.0
+torchvision==0.26.0
+ultralytics==8.4.48
+supervision==0.28.0
