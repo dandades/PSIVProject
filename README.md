@@ -1,62 +1,62 @@
 # Football Player Detection, Tracking & Team Classification in Video
 
-Este proyecto analiza un video de futbol para detectar jugadores validos,
-mantener un identificador estable por jugador y clasificar cada jugador en
-Equipo A o Equipo B segun los colores de la camiseta.
+This project analyzes football videos to detect valid players, keep a stable
+identifier for each player, and classify each player as Team A or Team B based
+on shirt colors.
 
 ## Pipeline
 
-1. `main.py` lee el video y coordina la ejecucion completa.
-2. `extract_players.py` detecta jugadores con YOLO, aplica ByteTrack y usa `stubs/` como cache de tracks.
-3. `trackers/` estabiliza IDs, fusiona tracks fragmentados y filtra porteros/arbitros.
-4. `labeling.py` asigna un equipo estable a cada `track_id`.
-5. `team_assigner/` extrae caracteristicas visuales de camiseta y aplica K-Means para separar Equipo A y Equipo B.
-6. `trackers/drawing.py` dibuja las inferencias finales en el video de resultado: cajas, IDs y equipo asignado.
-7. `manual_track_accuracy.py` genera evidencias para evaluar manualmente tracks y equipos.
+1. `main.py` reads the video and coordinates the full execution.
+2. `extract_players.py` detects players with YOLO, applies ByteTrack, and uses `stubs/` as a track cache.
+3. `trackers/` stabilizes IDs, merges fragmented tracks, and filters goalkeepers/referees.
+4. `labeling.py` assigns a stable team to each `track_id`.
+5. `team_assigner/` extracts visual shirt features and applies K-Means to separate Team A and Team B.
+6. `trackers/drawing.py` draws the final inferences on the output video: boxes, IDs, and assigned team.
+7. `manual_track_accuracy.py` generates evidence to manually evaluate tracks and teams.
 
-## Librerias
+## Libraries
 
-- `OpenCV`: lectura, escritura y manipulacion de frames de video.
-- `Ultralytics YOLO`: deteccion de jugadores, porteros y arbitros.
-- `Supervision`: integracion con ByteTrack para el seguimiento.
-- `NumPy`: calculos numericos sobre cajas, posiciones y features visuales.
-- `Scikit-learn`: K-Means y normalizacion para clasificar equipos.
-- `PyTorch`: backend usado por el modelo YOLO.
+- `OpenCV`: reading, writing, and manipulating video frames.
+- `Ultralytics YOLO`: detecting players, goalkeepers, and referees.
+- `Supervision`: ByteTrack integration for object tracking.
+- `NumPy`: numerical calculations for boxes, positions, and visual features.
+- `Scikit-learn`: K-Means and normalization for team classification.
+- `PyTorch`: backend used by the YOLO model.
 
-## Ejecucion
+## Execution
 
-Procesar el video por defecto:
+Process the default video:
 
 ```bash
 python main.py
 ```
 
-Indicar entrada y salida:
+Set input and output paths:
 
 ```bash
 python main.py --input input_videos/110.mp4 --output output_videos/110_result.avi
 ```
 
-Recalcular tracks sin usar cache:
+Recalculate tracks without using cache:
 
 ```bash
 python main.py --input input_videos/110.mp4 --output output_videos/110_result.avi --no-stubs
 ```
 
-## Evaluacion Manual
+## Manual Evaluation
 
-Genera una evidencia por cada `track_id` y guarda resultados en CSV/JSON:
+Generate one evidence sample for each `track_id` and save results as CSV/JSON:
 
 ```bash
 python manual_track_accuracy.py --video input_videos/110.mp4
 ```
 
-Opciones durante la revision:
+Options during the review:
 
-| Tecla | Significado |
+| Key | Meaning |
 | --- | --- |
-| `s` | Jugador valido y equipo correcto. |
-| `n` | Jugador valido, equipo incorrecto. |
-| `t` | No es jugador valido. |
-| `k` | Saltar ID. |
-| `q` | Salir y guardar. |
+| `s` | Valid player and correct team. |
+| `n` | Valid player, incorrect team. |
+| `t` | Not a valid player. |
+| `k` | Skip ID. |
+| `q` | Quit and save. |
