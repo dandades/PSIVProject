@@ -4,6 +4,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 
 import cv2
 
@@ -307,7 +308,7 @@ def write_results(output_dir, evidence):
     return csv_path, json_path
 
 
-def print_metrics(evidence, total_frames, csv_path, json_path):
+def print_metrics(evidence, total_frames, csv_path, json_path, execution_time):
     reviewed = [
         item for item in evidence.values()
         if item["manual_answer"] not in ("", "skip")
@@ -333,6 +334,7 @@ def print_metrics(evidence, total_frames, csv_path, json_path):
 
     print("\nResultados")
     print(f"Frames procesados: {total_frames}")
+    print(f"Tiempo de ejecución: {execution_time:.2f} segundos")
     print(f"IDs con evidencia: {len(evidence)}")
     print(f"IDs revisados: {len(reviewed)}")
     print(f"IDs saltados: {skipped_count}")
@@ -353,12 +355,16 @@ def main():
     args = parse_args()
     output_dir = ensure_output_dir(args.output, args.video)
 
+    start_time = time.time()
     evidence, total_frames = collect_evidence(args, output_dir)
+    execution_time = time.time() - start_time
+
     if not evidence:
         print("No se ha generado evidencia. Prueba con otro video o sin stubs.")
         return
 
     print(f"\nEvidencias guardadas en: {output_dir}")
+    print(f"Tiempo de ejecución del procesamiento automático: {execution_time:.2f} segundos")
     print(f"Numero de IDs a revisar: {len(evidence)}")
 
     if not args.collect_only:
@@ -366,7 +372,7 @@ def main():
         ask_manual_labels(evidence, open_images=not args.no_open)
 
     csv_path, json_path = write_results(output_dir, evidence)
-    print_metrics(evidence, total_frames, csv_path, json_path)
+    print_metrics(evidence, total_frames, csv_path, json_path, execution_time)
 
 
 if __name__ == "__main__":

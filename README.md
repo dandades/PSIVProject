@@ -1,53 +1,98 @@
-# Football Player Team Classification
+# Football Analysis
 
-Este proyecto analiza un video de futbol para detectar jugadores validos,
-mantener un identificador estable por jugador y clasificar cada jugador en
-Equipo A o Equipo B segun los colores de la camiseta.
+Proyecto para analizar videos de futbol: detecta jugadores, mantiene un
+`track_id` estable y clasifica cada jugador en Equipo A o Equipo B segun la
+apariencia de la camiseta.
 
-## Pipeline Actual
-
-1. `main.py` lee el video y coordina la ejecucion completa.
-2. `extract_players.py` detecta jugadores con YOLO, aplica ByteTrack y estabiliza IDs.
-3. `labeling.py` entrena el clasificador de equipos sobre los tracks detectados.
-4. `team_assigner/` extrae caracteristicas visuales de camiseta y aplica K-Means.
-5. `trackers/` corrige identidades, filtra porteros/arbitros y dibuja las cajas finales.
-6. `utils/` contiene utilidades sencillas para video y cajas.
+Usa YOLO para deteccion, ByteTrack para seguimiento y K-Means sobre
+caracteristicas de color/textura para separar los equipos.
 
 ## Estructura
 
-- `main.py`: punto de entrada para inferencia de video.
-- `extract_players.py`: deteccion, tracking, filtrado de jugadores y cache de stubs.
-- `labeling.py`: asignacion de equipos a cada `track_id`.
-- `manual_track_accuracy.py`: herramienta de evaluacion manual de tracks/equipos.
-- `trackers/tracker.py`: fachada principal del tracker.
-- `trackers/track_appearance.py`: apariencia visual usada para reidentificacion.
-- `trackers/identity.py`: estabilizacion y fusion de IDs.
-- `trackers/invalid_roles.py`: descarte de porteros y arbitros.
-- `trackers/drawing.py`: cajas e IDs dibujados en el video.
-- `team_assigner/player_features.py`: recorte, mascara verde y vector de caracteristicas.
-- `team_assigner/team_model.py`: limpieza de muestras, K-Means y validacion de outliers.
+- `main.py`: punto de entrada para procesar un video.
+- `extract_players.py`: deteccion, tracking y cache de tracks.
+- `labeling.py`: asignacion de equipo por `track_id`.
+- `manual_track_accuracy.py`: evaluacion manual de tracks y equipos.
+- `trackers/`: logica de tracking, reidentificacion, filtrado y dibujo.
+- `team_assigner/`: extraccion de features y clasificacion por equipos.
+- `training/`: notebooks y dataset para entrenar el detector YOLO.
+- `models/best.pt`: modelo YOLO esperado por defecto.
 
-## Clasificacion Por Equipos
+## Librerias Principales
 
-Para cada jugador se toma la zona superior de la caja, se elimina el cesped con
-una mascara verde y se extraen caracteristicas de color/textura. Despues se
-agregan muestras limpias por `track_id` y se entrena K-Means con dos clusters.
-El equipo queda fijado al `track_id`, no cambia frame a frame.
+- `OpenCV`: lectura, escritura y manipulacion de frames de video.
+- `Ultralytics YOLO`: deteccion de jugadores, porteros y arbitros.
+- `Supervision`: integracion con ByteTrack para el seguimiento.
+- `NumPy`: calculos numericos sobre cajas, posiciones y features visuales.
+- `Scikit-learn`: K-Means y normalizacion para clasificar equipos.
+- `PyTorch`: backend usado por el modelo YOLO.
+
+## Instalacion
+
+```bash
+python -m venv .venv
+```
+
+En Windows PowerShell:
+
+```bash
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+En Linux/macOS:
+
+```bash
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ## Ejecucion
+
+Procesar el video por defecto:
+
+```bash
+python main.py
+```
+
+Indicar entrada y salida:
 
 ```bash
 python main.py --input input_videos/110.mp4 --output output_videos/110_result.avi
 ```
 
-Para recalcular tracks sin usar cache:
+Recalcular tracks sin usar cache:
 
 ```bash
 python main.py --input input_videos/110.mp4 --output output_videos/110_result.avi --no-stubs
 ```
 
-Para evaluar manualmente:
+Usar otro modelo o cambiar el minimo de frames por track:
 
 ```bash
-python manual_track_accuracy.py --video input_videos/110.mp4 --output manual_eval/110
+python main.py --model models/best.pt --min-track-frames 8
 ```
+
+## Evaluacion Manual
+
+Genera una evidencia por cada `track_id` y guarda resultados en CSV/JSON:
+
+```bash
+python manual_track_accuracy.py --video input_videos/110.mp4
+```
+
+Solo generar evidencias, sin revision interactiva:
+
+```bash
+python manual_track_accuracy.py --video input_videos/110.mp4 --collect-only
+```
+
+Opciones durante la revision:
+
+| Tecla | Significado |
+| --- | --- |
+| `s` | Jugador valido y equipo correcto. |
+| `n` | Jugador valido, equipo incorrecto. |
+| `t` | No es jugador valido. |
+| `k` | Saltar ID. |
+| `q` | Salir y guardar. |
