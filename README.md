@@ -1,4 +1,4 @@
-# Football Analysis
+# Football Player Detection, Tracking & Team Classification in Video
 
 Proyecto para analizar videos de futbol: detecta jugadores, mantiene un
 `track_id` estable y clasifica cada jugador en Equipo A o Equipo B segun la
