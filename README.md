@@ -43,24 +43,12 @@ Recalcular tracks sin usar cache:
 python main.py --input input_videos/110.mp4 --output output_videos/110_result.avi --no-stubs
 ```
 
-Usar otro modelo o cambiar el minimo de frames por track:
-
-```bash
-python main.py --model models/best.pt --min-track-frames 8
-```
-
 ## Evaluacion Manual
 
 Genera una evidencia por cada `track_id` y guarda resultados en CSV/JSON:
 
 ```bash
 python manual_track_accuracy.py --video input_videos/110.mp4
-```
-
-Solo generar evidencias, sin revision interactiva:
-
-```bash
-python manual_track_accuracy.py --video input_videos/110.mp4 --collect-only
 ```
 
 Opciones durante la revision:
