@@ -1,24 +1,20 @@
 # Football Player Detection, Tracking & Team Classification in Video
 
-Proyecto para analizar videos de futbol: detecta jugadores, mantiene un
-`track_id` estable y clasifica cada jugador en Equipo A o Equipo B segun la
-apariencia de la camiseta.
+Este proyecto analiza un video de futbol para detectar jugadores validos,
+mantener un identificador estable por jugador y clasificar cada jugador en
+Equipo A o Equipo B segun los colores de la camiseta.
 
-Usa YOLO para deteccion, ByteTrack para seguimiento y K-Means sobre
-caracteristicas de color/textura para separar los equipos.
+## Pipeline
 
-## Estructura
+1. `main.py` lee el video y coordina la ejecucion completa.
+2. `extract_players.py` detecta jugadores con YOLO, aplica ByteTrack y usa `stubs/` como cache de tracks.
+3. `trackers/` estabiliza IDs, fusiona tracks fragmentados y filtra porteros/arbitros.
+4. `labeling.py` asigna un equipo estable a cada `track_id`.
+5. `team_assigner/` extrae caracteristicas visuales de camiseta y aplica K-Means para separar Equipo A y Equipo B.
+6. `trackers/drawing.py` dibuja las inferencias finales en el video de resultado: cajas, IDs y equipo asignado.
+7. `manual_track_accuracy.py` genera evidencias para evaluar manualmente tracks y equipos.
 
-- `main.py`: punto de entrada para procesar un video.
-- `extract_players.py`: deteccion, tracking y cache de tracks.
-- `labeling.py`: asignacion de equipo por `track_id`.
-- `manual_track_accuracy.py`: evaluacion manual de tracks y equipos.
-- `trackers/`: logica de tracking, reidentificacion, filtrado y dibujo.
-- `team_assigner/`: extraccion de features y clasificacion por equipos.
-- `training/`: notebooks y dataset para entrenar el detector YOLO.
-- `models/best.pt`: modelo YOLO esperado por defecto.
-
-## Librerias Principales
+## Librerias
 
 - `OpenCV`: lectura, escritura y manipulacion de frames de video.
 - `Ultralytics YOLO`: deteccion de jugadores, porteros y arbitros.
@@ -26,26 +22,6 @@ caracteristicas de color/textura para separar los equipos.
 - `NumPy`: calculos numericos sobre cajas, posiciones y features visuales.
 - `Scikit-learn`: K-Means y normalizacion para clasificar equipos.
 - `PyTorch`: backend usado por el modelo YOLO.
-
-## Instalacion
-
-```bash
-python -m venv .venv
-```
-
-En Windows PowerShell:
-
-```bash
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-```
-
-En Linux/macOS:
-
-```bash
-source .venv/bin/activate
-pip install -r requirements.txt
-```
 
 ## Ejecucion
 
